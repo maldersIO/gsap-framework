@@ -19,31 +19,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //Add Basic GSAP Framework Scripts enqueued from CDN
 
-add_action( 'wp_enqueue_scripts' , 'gsap_framework_scripts' );
-
 function gsap_framework_scripts(){
-	wp_enqueue_script( 'gsap' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap3' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap4' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap5' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/EaselPlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap6' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap7' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/PixiPlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap8' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap9' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js' , array() , null , true );
-	wp_enqueue_script( 'gsap10' , 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js' , array() , null , true );
+	echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/EaselPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/PixiPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>';
 }
-
-
-//Add-On Scripts not included in the Basic GSAP Framework 
-/*
-add_action ('wp_enqueue_scripts','gsap_framework_addon_scripts');
-
-function gsap_framework_addon_scripts(){
-
-}
-
-*/
-
+add_action('wp_head','gsap_framework_scripts');
 
 //______________________________________________________________________________
 // All About Updates
